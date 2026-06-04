@@ -1,6 +1,6 @@
 import Dashboard from "./pages/admin_site/Dashboard";
 import Map from "./pages/admin_site/Map";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import ManageAccount from "./pages/admin_site/ManageAccount";
@@ -24,7 +24,7 @@ import ManageReports from "./pages/admin_site/ManageReports";
 function App() {
   return (
 
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Admin Pages */}
         <Route path="admin/dashboard" element={<Dashboard />} />
@@ -57,7 +57,7 @@ function App() {
         <Route path="/forbidden" element={<RoutingContent />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 
 }
